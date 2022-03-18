@@ -2,6 +2,7 @@ const express = require("express")
 
 const mongo = require("mongodb").MongoClient
 
+
 function connectAndFetchDBs(){
     const url = "mongodb+srv://pencil_be:pencil_be@pencilbeproject.8wvex.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
     let db, questions, topics;
@@ -68,6 +69,10 @@ function connectAndFetchDBs(){
         }
         return questionsSet
     }
+
+    app.get('/', (req, res) => {
+        res.send('Hello World!')
+    })
 
     app.get("/search/:q", (req, res) => {
         console.log(req.params.q)
