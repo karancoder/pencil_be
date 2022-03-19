@@ -10,3 +10,5 @@ Sample Query:
     - pencil-be-app.herokuapp.com/questions/{some question}
 - Query to get all questions containing given {topic} or any topic/annotation in {topic}'s subtree:
     - pencil-be-app.herokuapp.com/search/{topic}
+
+##### Note: use "https://" prefix in case any of above query is not reachable
